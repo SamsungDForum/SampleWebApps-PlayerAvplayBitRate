@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <title>PlayerAvplayBitRate</title>
+    <script src="$WEBAPIS/webapis/webapis.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1 class="appName">PlayerAvplayBitRate</h1>
+        <h2 class="appVersion">2.0.0</h2>
+        <div class="tvInfo">
+            <p class="firmware"></p>
+            <p class="model"></p>
+        </div>
+    </header>
+    <section class="main">
+        <div class="left">
+            <div class="player">
+                <object id="av-player" type="application/avplayer"></object>
+                <div class="time"></div>
+            </div>
+            <div id="video-select">
+                <h3>Current Video:</h3>
+                <button data-list-item class="selected-video">Star trek</button>
+            </div>
+        </div>
+        <div class="data">
+            <h3>Video</h3>
+            <button data-list-item id="track-video-auto" class="current choosen">Auto</button>
+        </div>
+
+        <div class="popup-box hidden">
+            <div id="closeButton">
+                <button data-list-item class="close">x</button>
+            </div>
+            <div id="video-list">
+            </div>
+        </div>
+
+    </section>
+    <section class="logs">
+        <h2>Logs:</h2>
+        <div data-list-item class="logsContainer">
+
+        </div>
+    </section>
+    <section class="info">
+        <section class="info-container">
+            <h2>Info</h2>
+
+            <p>This App demonstrates how to controll adaptive stream with the use of AVPlay.</p>
+
+            <p>User can switch streams playing, clicking the button under <strong>Current Video</strong> label, and choosing aproperiate one.</p>
+
+            <p>User also can change which file from the adaptive stream manifest, should play, under the <strong>Video</strong> label</p>
+
+            <p>User can add own streams, adding objects to streamData array in config.js file.</p>
+
+        </section>
+    </section>
+    <section class="buttons" id="buttons">
+        <button data-list-item class="play">Play</button>
+        <button data-list-item class="stop">Stop</button>
+        <button data-list-item class="pause">Pause</button>
+        <button data-list-item class="ff">Fast Forward</button>
+        <button data-list-item class="rew">Rewind</button>
+        <button data-list-item class="fullscreen">Toggle fullscreen</button>
+
+        <button data-list-item class="toggle-info">Show/hide info</button>
+    </section>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/keyhandler.js"></script>
+    <script src="./js/logger.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/videoPlayerBitRate.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
